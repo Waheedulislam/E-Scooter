@@ -4,8 +4,8 @@ const ProductInformation = () => {
     return (
         <div className='text-all-color'>
             <div className="text-center text-all-color">
-                <h1 className='text-4xl font-bold mt-10 mb-6'>Product Information</h1>
-                <p className='  font-semibold '>Our Scooter has following unique design and technology features:</p>
+                <h1 className='text-5xl font-bold mt-10 mb-6'>Product Information</h1>
+                <p className='text-xl  font-semibold '>Our Scooter has following unique design and technology features:</p>
             </div>
             <div className="hero  ">
 
