@@ -1,4 +1,5 @@
 import Colors from "../../Components/Home/Colors";
+import Features from "../../Components/Home/Features";
 import NewsLetter from "../../Components/Home/NewsLetter";
 import ProductInformation from "../../Components/Home/ProductInformation";
 import Testimonials from "../../Components/Home/Testimonials";
@@ -9,6 +10,7 @@ const Home = () => {
     return (
         <div>
             <Navbar />
+            <Features />
             <ProductInformation />
             <Colors />
             <Testimonials />
