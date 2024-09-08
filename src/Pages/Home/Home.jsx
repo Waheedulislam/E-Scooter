@@ -1,5 +1,6 @@
 import Colors from "../../Components/Home/Colors";
 import Features from "../../Components/Home/Features";
+import Gallery from "../../Components/Home/Gallery";
 import Hero from "../../Components/Home/Hero";
 import HighEfficiencyMotor from "../../Components/Home/HighEfficiencyMotor";
 import MultipleAccessories from "../../Components/Home/MultipleAccessories";
@@ -19,6 +20,7 @@ const Home = () => {
             <HighEfficiencyMotor />
             <MultipleAccessories />
             <MultipleAccessories2 />
+            <Gallery />
             <Colors />
             <Testimonials />
             <NewsLetter />
