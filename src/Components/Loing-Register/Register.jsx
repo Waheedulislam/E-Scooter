@@ -44,7 +44,7 @@ const Register = () => {
     }, [formLocation, user, navigate])
 
     return (
-        <div className="mb-20 mt-10">
+        <div className="mb-20 mt-10 text-all-color">
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
@@ -53,7 +53,7 @@ const Register = () => {
                     </div>
                     <div className="card shrink-0 w-full max-w-lg max-h-lg shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                            <h1 className="text-4xl font-bold text-center text-teal-700">Sign Up now...!</h1>
+                            <h1 className="text-4xl font-bold text-center ">Sign Up now...!</h1>
 
                             {/* Name  */}
                             <div className="form-control">
@@ -130,8 +130,7 @@ const Register = () => {
 
 
                             <div className="form-control mt-6">
-                                <button type="submit" disabled={loading} className="btn rounded-full bg-teal-600 text-white border-white border-2 hover:text-teal-700 hover:border-teal-700 hover:bg-white text-lg "> {loading ? 'Loading...' : 'Register'}</button>
-                                <button>Register</button>
+                                <button type="submit" disabled={loading} className="btn rounded-full bg-[#42454A] text-white border-white border-2 hover:text-[#42454A] hover:border-[#42454A] hover:bg-white text-lg "> {loading ? 'Loading...' : 'Register'}</button>
                             </div>
                         </form>
 
