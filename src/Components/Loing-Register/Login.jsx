@@ -3,9 +3,10 @@ import GithubLogin from "../Auth/GithubLogin";
 import GoogleLogin from "../Auth/GoogleLogin";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../Firebase/Firebase.config";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const Login = () => {
     // show password 
@@ -14,15 +15,23 @@ const Login = () => {
     const {
         register,
         handleSubmit,
+        getValues,
         formState: { errors },
     } = useForm()
-
+    // sign in email and password
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    // reset password
+    const [email, setEmail] = useState('');
+    console.log(email)
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(
+        auth
+    );
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -31,6 +40,7 @@ const Login = () => {
     const formLocation = location?.state?.from?.pathname || '/';
 
     const onSubmit = (data) => {
+        console.log(data)
         signInWithEmailAndPassword(data.email, data.password)
     }
 
@@ -39,8 +49,23 @@ const Login = () => {
             navigate(formLocation, { replace: true });
         }
     }, [formLocation, user, navigate])
+
+
+    const handleResetPassword = async () => {
+        const email = getValues("email");
+        const success = await sendPasswordResetEmail(
+            email
+        );
+
+        if (success) {
+            alert('Please Check your email.')
+            toast.success('Sent email.')
+        }
+    };
+
+
     return (
-        <div>
+        <div className='mb-20 mt-10 text-all-color'>
             <div className="hero min-h-screen ">
 
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -50,7 +75,7 @@ const Login = () => {
                     </div>
                     <div className="card shrink-0 w-full max-w-lg max-h-lg shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                            <h1 className="text-4xl font-bold text-center text-teal-700">Login now...!</h1>
+                            <h1 className="text-4xl font-bold text-center">Login now...!</h1>
 
                             {/* Email  */}
                             <div className="form-control">
@@ -60,7 +85,7 @@ const Login = () => {
                                 <input type="email"
                                     placeholder="Email"
                                     name="email"
-                                    // onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="input input-bordered"
                                     required
                                     {...register("email")}
@@ -104,14 +129,14 @@ const Login = () => {
                                 </div>
                             </div>
 
-                            {/* <label className="label">
+                            <label className="label">
                                 <a onClick={handleResetPassword} href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label> */}
+                            </label>
 
                             {/* error massage  */}
 
                             {
-                                error && <p style={{ color: 'red' }} className="text-start font-semibold">{error?.message?.slice(10, 44)}</p>
+                                error && <p style={{ color: 'red' }} className="text-start font-semibold">{error?.message?.slice(10)}</p>
                             }
 
                             <div className="flex justify-center ">
@@ -121,7 +146,7 @@ const Login = () => {
 
 
                             <div className="form-control mt-6">
-                                <button type="submit" disabled={loading} className="btn rounded-full bg-teal-600 text-white border-white border-2 hover:text-teal-700 hover:border-teal-700 hover:bg-white text-lg "> {loading ? 'Loading...' : 'Logins'}</button>
+                                <button type="submit" disabled={loading} className="btn rounded-full bg-[#42454A] text-white border-white border-2 hover:text-[#42454A] hover:border-[#42454A] hover:bg-white text-lg "> {loading ? 'Loading...' : 'Logins'}</button>
                             </div>
                         </form>
                         <div className="flex flex-col w-full">
