@@ -3,7 +3,7 @@ import navLogo from '../../assets/nav-logo.png';
 
 const Navbar = () => {
     const navOption = <>
-        <li><Link to={'/home'}>Home</Link></li>
+        <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/ProductListing'}>Product Listing</Link></li>
         <li><Link to={'/ProductDetails'}>Product Details</Link></li>
         <li><a>GALLERY</a></li>
@@ -33,7 +33,9 @@ const Navbar = () => {
                         {navOption}
                     </ul>
                 </div>
-                <Link to={'/home'}><img src={navLogo} alt="" /></Link>
+                <div>
+                    <Link to={'/'}><img src={navLogo} alt="" /></Link>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -42,7 +44,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-4">
                 <Link to={'/login'}><a className="btn">LOG IN</a></Link>
-                <Link to={'/register'}> <a className="btn bg-[#42454A] text-white btn-md">SIGN IN</a></Link>
+                <Link to={'/register'}> <a className="btn bg-[#42454A] text-white btn-md">SIGN UP</a></Link>
             </div>
         </div>
     );
