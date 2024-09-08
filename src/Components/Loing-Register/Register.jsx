@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../Firebase/Firebase.config";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import GoogleLogin from "../Auth/GoogleLogin";
@@ -13,9 +13,9 @@ const Register = () => {
     // Create Email and password.
     const [
         createUserWithEmailAndPassword,
-        // user,
-        // loading,
-        // error,
+        user,
+        loading,
+        error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
     // use from
@@ -25,10 +25,23 @@ const Register = () => {
         formState: { errors },
     } = useForm()
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    // location path condition
+    const formLocation = location?.state?.from?.pathname || '/';
+
     const onSubmit = (data) => {
         console.log(data)
         createUserWithEmailAndPassword(data.email, data.password, data.name)
     }
+
+
+    useEffect(() => {
+        if (user) {
+            navigate(formLocation, { replace: true });
+        }
+    }, [formLocation, user, navigate])
 
     return (
         <div className="mb-20 mt-10">
@@ -106,6 +119,10 @@ const Register = () => {
                                 </div>
                             </div>
 
+                            {/* error massage  */}
+                            {
+                                error && <p style={{ color: 'red' }} className="text-start font-semibold">{error?.message?.slice(10, 44)}</p>
+                            }
                             <div className="flex justify-center ">
                                 <p className="font-semibold">Already have an account ?</p>
                                 <Link to={'/login'} className="mr-52 font-bold hover:text-teal-600">Login </Link>
@@ -113,7 +130,7 @@ const Register = () => {
 
 
                             <div className="form-control mt-6">
-                                {/* <button type="submit" disabled={loading} className="btn rounded-full bg-teal-600 text-white border-white border-2 hover:text-teal-700 hover:border-teal-700 hover:bg-white text-lg "> {loading ? 'Loading...' : 'Register'}</button> */}
+                                <button type="submit" disabled={loading} className="btn rounded-full bg-teal-600 text-white border-white border-2 hover:text-teal-700 hover:border-teal-700 hover:bg-white text-lg "> {loading ? 'Loading...' : 'Register'}</button>
                                 <button>Register</button>
                             </div>
                         </form>
