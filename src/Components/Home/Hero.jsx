@@ -8,13 +8,10 @@ const Hero = () => {
 
         <div className="hero  min-h-screen text-all-color">
             <div className="hero-content flex-col lg:flex-row-reverse ">
-
-
-
                 <img
                     style={{ backgroundImage: `url(${bannerBg})` }}
                     src={bannerImage}
-                    className=" rounded-lg -mr-20" />
+                    className=" rounded-lg -mr-18" />
 
 
 

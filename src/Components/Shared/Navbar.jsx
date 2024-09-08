@@ -3,7 +3,7 @@ import navLogo from '../../assets/nav-logo.png';
 
 const Navbar = () => {
     const navOption = <>
-        <li><Link to={'/'}>Home</Link></li>
+        <li><Link to={'/home'}>Home</Link></li>
         <li><Link to={'/ProductListing'}>Product Listing</Link></li>
         <li><Link to={'/ProductDetails'}>Product Details</Link></li>
         <li><a>GALLERY</a></li>
@@ -33,7 +33,7 @@ const Navbar = () => {
                         {navOption}
                     </ul>
                 </div>
-                <img src={navLogo} alt="" />
+                <Link to={'/home'}><img src={navLogo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

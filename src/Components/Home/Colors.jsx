@@ -7,7 +7,7 @@ import image4 from '../../assets/4.png'
 const Colors = () => {
     return (
         <div className='text-center text-all-color'>
-            <div>
+            <div className='my-20'>
                 <h1 className='text-5xl font-bold my-10'>Colors</h1>
                 <p className='text-xl  font-semibold mb-16'>Checkout our products colors.</p>
             </div>
