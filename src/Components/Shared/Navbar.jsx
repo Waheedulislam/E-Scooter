@@ -1,8 +1,8 @@
-import { MdOutlineBikeScooter } from "react-icons/md";
+import navLogo from '../../assets/nav-logo.png';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-200 px-10">
+        <div className="navbar bg-base-200 px-12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
                         <li><a>CONTACT</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl"><MdOutlineBikeScooter className="w-12 h-12 text-color-[#42454A]" /></a>
+                <img src={navLogo} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
