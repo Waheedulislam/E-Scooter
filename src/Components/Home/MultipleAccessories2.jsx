@@ -36,8 +36,8 @@ const MultipleAccessories2 = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center '>
-                <h1 className='text-3xl rounded-lg w-[570px] h-[94px] font-bold   text-center border-[2px] pt-6'>More Accessories Coming Soon</h1>
+            <div className='flex  justify-center '>
+                <h1 className='text-3xl hover:shadow-lg rounded-lg w-[570px] h-[94px] font-bold   text-center border-[2px] pt-6'>More Accessories Coming Soon</h1>
             </div>
 
         </div>

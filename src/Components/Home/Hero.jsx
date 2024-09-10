@@ -7,8 +7,8 @@ import heroImage from '../../assets/hero.png'
 const Hero = () => {
     return (
 
-        <div>
-            <div className=" ml-8 text-all-color">
+        <div >
+            <div className=" lg:ml-3 text-all-color">
                 <div className="hero-content flex-col lg:flex-row-reverse ">
                     {/* <div className='flex lg:w-1/2 lg:ml-96'>
 
@@ -26,14 +26,14 @@ const Hero = () => {
                     </div> */}
 
                     <div>
-                        <img src={heroImage} className='w-full lg:-mb-40 lg:ml-36 ml-4 ' alt="" />
+                        <img src={heroImage} className='w-full lg:-mb-40 lg:ml-36 md:ml-24 ml-4 ' alt="" />
 
                     </div>
 
 
 
 
-                    <div >
+                    <div className='md:-ml-52 lg:ml-10'>
                         <h1 className="text-7xl ">LETS RIDE </h1>
                         <span className='font-bold text-7xl '>THE FUTURE.</span>
                         <div className="flex w-[335px] flex-col mt-10 mb-8">
