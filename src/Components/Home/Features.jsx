@@ -1,7 +1,7 @@
 
 const Features = () => {
     return (
-        <div className="text-all-color grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 justify-items-center gap-10 mx-10 mt-14 mb-28">
+        <div className="text-all-color grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 justify-items-center gap-10 mx-14 mt-32 mb-28 my-10 ">
             <div className="card bg-base-100 w-[174.47px] h-[137px] shadow-xl border">
                 <div className="card-body items-center">
                     <h1>
