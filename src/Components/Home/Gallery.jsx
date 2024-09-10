@@ -22,26 +22,20 @@ const Gallery = () => {
                         <img src={scooter} alt="" className='w-[633px] h-[485px] static' />
 
                         <div className='lg:-mb-60 mr-12 mt-12'>
-                            <div className='flex my-2 justify-center '>
-                                <h1 className='text-3xl rounded-lg lg:w-[570px] lg:h-[94px] font-bold   text-center border-[2px] pt-6'>More Accessories Coming Soon</h1>
+                            <div className='flex my-2 justify-center hover:shadow-lg'>
+                                <h1 className='text-3xl rounded-lg lg:w-[570px] lg:h-[94px] font-bold   text-center border-[2px] pt-6'>Battery Images</h1>
                             </div>
-                            <div className='flex my-4 justify-center '>
-                                <h1 className='text-3xl rounded-lg lg:w-[570px] lg:h-[94px] font-bold   text-center border-[2px] pt-6'>More Accessories Coming Soon</h1>
+                            <div className='flex my-4 hover:shadow-lg justify-center '>
+                                <h1 className='text-3xl  rounded-lg lg:w-[570px] lg:h-[94px] font-bold   text-center border-[2px] pt-6'>Spare Parts Images</h1>
                             </div>
-                            <div className='flex my-4 justify-center '>
-                                <h1 className='text-3xl rounded-lg lg:w-[570px] lg:h-[94px] font-bold   text-center border-[2px] pt-6'>More Accessories Coming Soon</h1>
+                            <div className='flex my-4 hover:shadow-lg justify-center '>
+                                <h1 className='text-3xl rounded-lg lg:w-[570px] lg:h-[94px] font-bold   text-center border-[2px] pt-6'>Charging Cable Images</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <div>
-                <img src={scooter} alt="" />
-            </div> */}
-            {/* <div>
-                <img src={build} alt="" />
-                <img src={parts} alt="" />
-            </div> */}
+
         </div>
     );
 };
