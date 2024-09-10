@@ -1,7 +1,23 @@
 import { Link } from 'react-router-dom';
 import navLogo from '../../assets/nav-logo.png';
-
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
+import auth from '../Firebase/Firebase.config'
+import userPhoto from '../../assets/user-profile-icon-free-vector.jpg'
+import { toast } from 'react-toastify';
 const Navbar = () => {
+    const [user] = useAuthState(auth);
+    console.log(user)
+    const [signOut] = useSignOut(auth);
+
+    const handleSignOut = () => {
+        const successSignOut = signOut();
+        if (successSignOut) {
+            // localStorage.removeItem('access-token');
+            alert("Do you want to logout...?");
+            toast.success("Successfully Logout");
+        }
+    };
+
     const navOption = <>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/ProductListing'}>Product Listing</Link></li>
@@ -10,7 +26,7 @@ const Navbar = () => {
         <li><a>CONTACT</a></li>
     </>
     return (
-        <div className="navbar bg-base-200 px-12">
+        <div className="navbar bg-base-200 px-14">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,10 +58,38 @@ const Navbar = () => {
                     {navOption}
                 </ul>
             </div>
-            <div className="navbar-end gap-4">
-                <Link to={'/login'}><a className="btn">LOG IN</a></Link>
-                <Link to={'/register'}> <a className="btn bg-[#42454A] text-white btn-md">SIGN UP</a></Link>
-            </div>
+            {!user?.email ? (<>
+                <div className="navbar-end gap-4">
+                    <Link to={'/login'}><a className="btn">LOG IN</a></Link>
+                    <Link to={'/register'}> <a className="btn bg-[#42454A] text-white btn-md">SIGN UP</a></Link>
+                </div>
+
+            </>
+            ) : (
+                <>
+                    <div className="navbar-end gap-4">
+                        <a className='btn'>Dashboard</a>
+                        <div className="avatar">
+                            <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src={user?.photoURL || `${userPhoto}`} />{" "}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button
+                        className="btn ml-4 rounded-full bg-error text-white border-white border-2 hover:text-error hover:border-error hover:bg-white text-lg "
+                        onClick={handleSignOut}
+                    >
+                        Log Out
+                    </button>
+
+                </>
+            )
+
+            }
+
+
         </div>
     );
 };
