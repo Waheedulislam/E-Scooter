@@ -49,7 +49,7 @@ const Navbar = () => {
                         {navOption}
                     </ul>
                 </div>
-                <div>
+                <div className='ml-4'>
                     <Link to={'/'}><img src={navLogo} alt="" /></Link>
                 </div>
             </div>
