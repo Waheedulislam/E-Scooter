@@ -1,0 +1,363 @@
+{
+    "scooters": [
+        {
+            "id": 1,
+            "name": "E-Scooter X100",
+            "description": "Powerful scooter with 30km range and a top speed of 25km/h.",
+            "price": 450,
+            "category": "Urban Scooters",
+            "rating": 4.5,
+            "image": "https://m.media-amazon.com/images/I/61Qm+-mxqrL.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Speedster Pro",
+            "description": "Lightweight and foldable with enhanced speed of 30km/h.",
+            "price": 550,
+            "category": "High-Speed Scooters",
+            "rating": 4.7,
+            "image": "https://ifdalivestorage.blob.core.windows.net/user-uploads/34488/102158/00000000-0000-0000-0000-000000000000/01_Speedster_Carbon_Pro-new.jpg"
+        },
+        {
+            "id": 3,
+            "name": "City Glide 300",
+            "description": "A perfect city companion with 20km range and smooth ride.",
+            "price": 350,
+            "category": "Urban Scooters",
+            "rating": 4.2,
+            "image": "https://i5.walmartimages.com/seo/CITYGLIDE-C200-Scooter-Adults-Foldable-Lightweight-Adjustable-Adult-220-lbs-Capacity-Kick-Scooters-Carry-Strap-Kickstand-Blue_88a2a081-14de-4c43-9033-790c4418ae3f.6abb57218e1075df1b9424019f6ce57a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+        },
+        {
+            "id": 4,
+            "name": "Off-Road Beast",
+            "description": "Heavy-duty scooter built for rough terrain and hills.",
+            "price": 800,
+            "category": "Off-Road Scooters",
+            "rating": 4.8,
+            "image": "https://www.pedle-bikes.com/wp-content/uploads/2022/07/c-1_1080x1080.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Eco Ride 200",
+            "description": "Affordable e-scooter with decent range and energy-saving mode.",
+            "price": 299,
+            "category": "Budget Scooters",
+            "rating": 4.1,
+            "image": "https://ecobikecompany.com/cdn/shop/files/AmpereDeluxe700CStepThroughElectricBike250WBlue_2048x.webp?v=1715688257"
+        },
+        {
+            "id": 6,
+            "name": "TurboMax 500",
+            "description": "A high-performance scooter with a 40km range and turbo mode.",
+            "price": 650,
+            "category": "High-Speed Scooters",
+            "rating": 4.6,
+            "image": "https://csm2017.rs/wp-content/uploads/2024/07/Turbo-max-beli-3.png"
+        },
+        {
+            "id": 7,
+            "name": "Urban Mini",
+            "description": "Compact and portable scooter ideal for short commutes.",
+            "price": 270,
+            "category": "Urban Scooters",
+            "rating": 4.0,
+            "image": "https://pedalandchain.co.uk/cdn/shop/products/ArgentoActiveBike9-min_600x.png?v=1681996248"
+        },
+        {
+            "id": 8,
+            "name": "Mountain King",
+            "description": "Robust scooter designed for rugged environments with extra power.",
+            "price": 850,
+            "category": "Off-Road Scooters",
+            "rating": 4.9,
+            "image": "https://iscoot.com.au/cdn/shop/files/iScoot_Kaabo_MantisKingGT_1_894f0892-c6a4-49cb-aeeb-ff3742b8fb0a_1200x1200.png?v=1688960417"
+        },
+        {
+            "id": 9,
+            "name": "Swift Cruiser",
+            "description": "Cruise in style with 25km/h speed and sleek design.",
+            "price": 420,
+            "category": "Urban Scooters",
+            "rating": 4.4,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGxgOf9mPivvq4LPsGqAaDVWmUDZNO41Hmew&s"
+        },
+        {
+            "id": 10,
+            "name": "Speedy Max XL",
+            "description": "Heavy-duty scooter with extended battery life and powerful motor.",
+            "price": 780,
+            "category": "High-Speed Scooters",
+            "rating": 4.7,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4yt3nE2ywPCzHl8xtfLoPsrpYeLdklr0hJgGtDgRanyzlS3guJxnXKQIK98mAeaLtiZ4&usqp=CAU"
+        },
+        {
+            "id": 11,
+            "name": "Eco Traveler",
+            "description": "Energy-efficient e-scooter with sustainable design and features.",
+            "price": 310,
+            "category": "Budget Scooters",
+            "rating": 4.3,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNwV0UtCKC-qKvMXLgDaI8nyWlv8Jci5DooEViF805OhukN1t_G64ZFtDNY8Mc7wxwJFU&usqp=CAU"
+        },
+        {
+            "id": 12,
+            "name": "All-Terrain Rover",
+            "description": "Built for adventure with high-performance tires and shock absorption.",
+            "price": 900,
+            "category": "Off-Road Scooters",
+            "rating": 4.8,
+            "image": "https://cdn.shopify.com/s/files/1/2558/4966/products/GG_Side_Rover.jpg?v=1666831341"
+        },
+        {
+            "id": 13,
+            "name": "Zipster 400",
+            "description": "Quick acceleration and foldable design for easy storage.",
+            "price": 430,
+            "category": "Urban Scooters",
+            "rating": 4.2,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjFRymNXY0vOGsRksPvhke8uI3y1ZAyLqnIw&s"
+        },
+        {
+            "id": 14,
+            "name": "Velocity V200",
+            "description": "Compact but powerful with speeds up to 20km/h.",
+            "price": 290,
+            "category": "Urban Scooters",
+            "rating": 4.1,
+            "image": "https://image.made-in-china.com/318f0j00eTVYvNFIALzO/%E6%9C%80%E7%BB%88%E8%A7%86%E9%A2%91.mp4.webp"
+        },
+        {
+            "id": 15,
+            "name": "Trail Blazer",
+            "description": "Designed for rough trails with advanced suspension system.",
+            "price": 850,
+            "category": "Off-Road Scooters",
+            "rating": 4.7,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Jy8MrP9niCP8Iulu-MjXj6rR0vsKdefdww&s"
+        },
+        {
+            "id": 16,
+            "name": "Light Glide 150",
+            "description": "Ultra-light scooter with decent range for short commutes.",
+            "price": 270,
+            "category": "Budget Scooters",
+            "rating": 4.0,
+            "image": "https://iscoot.com.au/cdn/shop/files/iScoot_NIU_KQi2PRO_600x600.png?v=1688433993"
+        },
+        {
+            "id": 17,
+            "name": "Sprint Ultra",
+            "description": "Powerful e-scooter with speeds of up to 35km/h.",
+            "price": 670,
+            "category": "High-Speed Scooters",
+            "rating": 4.6,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqhQI9g9ibTFuxe39DTPkCJZLBSxR4PvDSg&s"
+        },
+        {
+            "id": 18,
+            "name": "EcoLite 100",
+            "description": "Simple and efficient e-scooter with basic features for daily use.",
+            "price": 240,
+            "category": "Budget Scooters",
+            "rating": 4.1,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyaASEA1_PpooAfvtwtBqSCVAmoZ-JzWgJhw&s"
+        },
+        {
+            "id": 19,
+            "name": "Max Offroader",
+            "description": "Premium scooter for rough terrain and extended adventures.",
+            "price": 920,
+            "category": "Off-Road Scooters",
+            "rating": 4.9,
+            "image": "https://kugoo.eu/cdn/shop/files/KuKirin-G2-Max.png?v=1717842427&width=1000"
+        },
+        {
+            "id": 20,
+            "name": "Commuter Pro",
+            "description": "High-end commuter scooter with dual motors and extra range.",
+            "price": 690,
+            "category": "Urban Scooters",
+            "rating": 4.6,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWtRohtnqaDleUNY1uDTl7z-Yb66jW0VewCQ&s"
+        },
+        {
+            "id": 21,
+            "name": "Rapid Runner",
+            "description": "Speed-focused e-scooter with advanced braking system.",
+            "price": 610,
+            "category": "High-Speed Scooters",
+            "rating": 4.7,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7SDegg0EwiCjaWt1BlJVDnZP7MhT4RigX6g&s"
+        },
+        {
+            "id": 22,
+            "name": "Budget Ride 150",
+            "description": "Entry-level scooter for casual riders with an affordable price tag.",
+            "price": 210,
+            "category": "Budget Scooters",
+            "rating": 4.0,
+            "image": "https://media.zigcdn.com/media/model/2024/Apr/ather-rizta-aaa-right-side-view_360x240.jpg"
+        },
+        {
+            "id": 23,
+            "name": "Dirt Dominator",
+            "description": "Off-road e-scooter with enhanced tires for dirt trails and hills.",
+            "price": 880,
+            "category": "Off-Road Scooters",
+            "rating": 4.9,
+            "image": "https://iscoot.com.au/cdn/shop/files/iScoot_DominatorSniper_1200x1200.png?v=1706590122"
+        },
+        {
+            "id": 24,
+            "name": "Glide 250",
+            "description": "Sleek and smooth scooter with a focus on style and functionality.",
+            "price": 430,
+            "category": "Urban Scooters",
+            "rating": 4.5,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-bzx0Tz2v4vDE2EIAav7dA_XdrjEBKDcQRg&s"
+        },
+        {
+            "id": 25,
+            "name": "Speed Surge",
+            "description": "Boost your ride with a top speed of 32km/h and long battery life.",
+            "price": 620,
+            "category": "High-Speed Scooters",
+            "rating": 4.6,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBUhjU1iqqeJBXNaCWsSHEFRptZxT_yWP5t6NX_9SfNroZTYFm9MPSbBt43daN6LPy1qQ&usqp=CAU"
+        },
+        {
+            "id": 26,
+            "name": "EcoSwift 150",
+            "description": "Environmentally-friendly scooter with minimalistic design.",
+            "price": 260,
+            "category": "Budget Scooters",
+            "rating": 4.2,
+            "image": "https://ecobikecompany.com/cdn/shop/products/SwiftyONE-e_19.jpg?v=1667907044"
+        },
+        {
+            "id": 27,
+            "name": "Rocky Trail",
+            "description": "Heavy-duty scooter designed for rough outdoor trails.",
+            "price": 930,
+            "category": "Off-Road Scooters",
+            "rating": 4.8,
+            "image": "https://www.electricbikeparadise.com/cdn/shop/products/say-yeah-36v-12ah-800w-folding-electric-scooter-sy-e-800-36421966233855_800x.jpg?v=1642153228"
+        },
+        {
+            "id": 28,
+            "name": "Urban Rush",
+            "description": "Fast city scooter with a 28km/h speed and sleek design.",
+            "price": 470,
+            "category": "Urban Scooters",
+            "rating": 4.3,
+            "image": "https://www.iscooterglobal.co.uk/cdn/shop/files/i10pluselectricscooter_1080x.jpg?v=1720435894"
+        },
+        {
+            "id": 29,
+            "name": "Quick Dash 350",
+            "description": "Fast-folding scooter for urban travel with 35km range.",
+            "price": 550,
+            "category": "High-Speed Scooters",
+            "rating": 4.5,
+            "image": "https://cdn11.bigcommerce.com/s-ofudk2260h/images/stencil/500x659/products/11053/16406/P1266602-Edit__00509.1702583666.jpg?c=1"
+        },
+        {
+            "id": 30,
+            "name": "Trail Crusher",
+            "description": "Crush off-road trails with this powerful and durable scooter.",
+            "price": 880,
+            "category": "Off-Road Scooters",
+            "rating": 4.9,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSef37SjXP8ISklOiVR6YhocDj-sy8mbX6MOw&s"
+        },
+        {
+            "id": 31,
+            "name": "Budget Glide",
+            "description": "Affordable scooter with basic features for everyday use.",
+            "price": 230,
+            "category": "Budget Scooters",
+            "rating": 4.1,
+            "image": "https://image.made-in-china.com/202f0j00wvtlVbNPCrgD/Standing-Best-Budget-Glide-Custom-E-Scooter.webp"
+        },
+        {
+            "id": 32,
+            "name": "Off-Road Thunder",
+            "description": "High-end off-road scooter with superior suspension and speed.",
+            "price": 950,
+            "category": "Off-Road Scooters",
+            "rating": 4.9,
+            "image": "https://image.made-in-china.com/2f0j00zBTUsQaKIkqE/Fast-11-Inch-off-Road-3200W-Wide-Wheel-PRO-Dual-Motor-Adult-Dualtron-Thunder-Electric-Scooter.webp"
+        },
+        {
+            "id": 33,
+            "name": "City Flyer",
+            "description": "Designed for the urban commuter with style and speed in mind.",
+            "price": 460,
+            "category": "Urban Scooters",
+            "rating": 4.4,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyhKaZpMcjsByuUhJAoCGYvYRmOeLiaPJzgA&s"
+        },
+        {
+            "id": 34,
+            "name": "Hyper Speed 600",
+            "description": "Premium high-speed scooter with a top speed of 40km/h.",
+            "price": 790,
+            "category": "High-Speed Scooters",
+            "rating": 4.7,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2osphUP5AzgtGPMJkyquphjlVR_AlonCug&s"
+        },
+        {
+            "id": 35,
+            "name": "Easy Ride 180",
+            "description": "Beginner-friendly scooter with simple controls and smooth ride.",
+            "price": 250,
+            "category": "Budget Scooters",
+            "rating": 4.0,
+            "image": "https://www.sisigad.com/cdn/shop/files/GoferMax-2_4a47343f-adbe-4642-bafc-85bf3c250241.jpg?v=1700632514&width=1080"
+        },
+        {
+            "id": 36,
+            "name": "Mountain Rover",
+            "description": "Conquer mountains and hills with this robust off-road scooter.",
+            "price": 870,
+            "category": "Off-Road Scooters",
+            "rating": 4.8,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtaea6R9vOnWaxLroZJDW_E-5RzH7EDcTx6Q&s"
+        },
+        {
+            "id": 37,
+            "name": "Urban Sprint",
+            "description": "Sprint through the city with a fast and reliable e-scooter.",
+            "price": 440,
+            "category": "Urban Scooters",
+            "rating": 4.5,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM3470yJ1Nx8Aoc281P9zdM9lFknPn1CDBTQ&s"
+        },
+        {
+            "id": 38,
+            "name": "Speed Rush Pro",
+            "description": "High-speed scooter with advanced battery and sleek design.",
+            "price": 780,
+            "rating": 4.6,
+            "image": "https://m.media-amazon.com/images/I/71OpkNIuT+L.jpg"
+        },
+        {
+            "id": 39,
+            "name": "Eco Step 120",
+            "description": "Economical and energy-saving scooter with basic features.",
+            "price": 220,
+            "category": "Budget Scooters",
+            "rating": 4.2,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwKbLhuQsBI3f9kRSG3mUeV3uLxYBfhl3qA&s"
+        },
+        {
+            "id": 40,
+            "name": "Trail Conqueror",
+            "description": "Top-rated off-road scooter for extreme conditions and adventures.",
+            "price": 950,
+            "category": "Off-Road Scooters",
+            "rating": 5.0,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShppgz92drwxTwitv3JnygRDMEqzGNFJ1F3Q&s"
+        }
+    ]
+}
