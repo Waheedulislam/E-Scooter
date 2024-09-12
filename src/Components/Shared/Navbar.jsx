@@ -67,7 +67,8 @@ const Navbar = () => {
             ) : (
                 <>
                     <div className="navbar-end gap-4">
-                        <a className='btn'>Dashboard</a>
+                        <Link to={'/dashboard'}><a className="btn">Cart</a></Link>
+
                         <div className="avatar">
                             <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                 <img src={user?.photoURL || `${userPhoto}`} />{" "}

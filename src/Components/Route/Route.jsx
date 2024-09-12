@@ -5,6 +5,15 @@ import ProductListing from "../../Pages/Product Listing/ProductListing";
 import ProductDetails from "../../Pages/Product Details/ProductDetails";
 import Login from "../Loing-Register/Login";
 import Register from "../Loing-Register/Register";
+import DashboardLayout from "../../Layouts/DashboardLayout";
+import DashboardHome from "../../Pages/DashboardPages/DashboardHome";
+import UserHome from "../../Pages/DashboardPages/User/UserHome";
+import AddReview from "../../Pages/DashboardPages/User/AddReview";
+import PaymentHistory from "../../Pages/DashboardPages/User/PaymentHistory";
+import Reservation from "../../Pages/DashboardPages/User/Reservation";
+import UserBooking from "../../Pages/DashboardPages/User/UserBooking";
+import UserCart from "../../Pages/DashboardPages/User/UserCart";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +42,51 @@ const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: '/dashboard',
+        element:
+            <PrivateRoute>
+                <DashboardLayout />
+            </PrivateRoute>,
+        children: [
+            /////// Public Route /////////
+            {
+                path: 'dashboardHome',
+                element: <DashboardHome />
+
+            },
+            /////// Admin Route /////////
+
+            /////// User Route /////////
+            {
+                path: 'user-home',
+                element: <UserHome></UserHome>
+            },
+            {
+                path: 'user-review',
+                element: <AddReview />
+            },
+            {
+                path: 'user-payment',
+                element: <PaymentHistory />
+            },
+            {
+                path: 'user-reservation',
+                element: <Reservation />
+            },
+            {
+                path: 'user-booking',
+                element: <UserBooking />
+            },
+            {
+                path: 'user-cart',
+                element: <UserCart />
+            },
+            /////// Public Route /////////
+        ]
+
+
+    }
 ]);
 
 export default router;
