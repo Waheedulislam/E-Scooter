@@ -1,10 +1,10 @@
 import { FaSearch } from "react-icons/fa";
-import useCart from "../../Components/Hooks/useCart";
 import AllScooter from "./AllScooterListing";
 import { useState } from "react";
+import UseScooters from "../../Components/Hooks/UseScooter";
 
 const ProductListing = () => {
-    const [scooters] = useCart();
+    const [scooters] = UseScooters();
     const [searchTerm, setSearchTerm] = useState('');
     const [category, setCategory] = useState('');
     const [priceRange, setPriceRange] = useState([0, 1000]); // [minPrice, maxPrice]
@@ -15,7 +15,7 @@ const ProductListing = () => {
     };
 
     return (
-        <div className="text-all-color mt-8">
+        <div className="text-all-color pt-20">
             <div className="text-center mb-10">
                 <h1 className="text-5xl font-bold">
                     Our <span className='text-teal-600'>Best Quality </span>

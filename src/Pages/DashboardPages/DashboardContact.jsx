@@ -2,7 +2,7 @@
 const DashboardContact = () => {
     return (
         <div>
-            <h1>Dash board contact</h1>
+            <h1>Dash board contact </h1>
         </div>
     );
 };

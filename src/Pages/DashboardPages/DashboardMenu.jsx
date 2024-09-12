@@ -2,7 +2,7 @@
 const DashboardMenu = () => {
     return (
         <div>
-            <h1>Dash board menu</h1>
+            <h1>Dash board menu  </h1>
         </div>
     );
 };
