@@ -4,9 +4,12 @@ import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
 import auth from '../Firebase/Firebase.config'
 import userPhoto from '../../assets/user-profile-icon-free-vector.jpg'
 import { toast } from 'react-toastify';
+import { FaCartShopping } from 'react-icons/fa6';
+import useCart from '../Hooks/useCart';
 const Navbar = () => {
     const [user] = useAuthState(auth);
     const [signOut] = useSignOut(auth);
+    const [scooters] = useCart()
 
     const handleSignOut = () => {
         const successSignOut = signOut();
@@ -21,11 +24,17 @@ const Navbar = () => {
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/ProductListing'}>Product Listing</Link></li>
         <li><Link to={'/ProductDetails'}>Product Details</Link></li>
-        <li><a>GALLERY</a></li>
-        <li><a>CONTACT</a></li>
+        <li>
+            <Link to={'/dashboard/user-cart'}>
+                <button className='flex items-center'>
+                    <FaCartShopping className='w-6 h-6' />
+                    <div className="badge badge-secondary ml-2">+{scooters.length}</div>
+                </button>
+            </Link>
+        </li>
     </>
     return (
-        <div className="navbar bg-base-200 px-14">
+        <div className="navbar fixed z-10 bg-opacity-95 bg-base-200  px-14">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -66,8 +75,7 @@ const Navbar = () => {
             </>
             ) : (
                 <>
-                    <div className="navbar-end gap-4">
-                        <Link to={'/dashboard'}><a className="btn">Cart</a></Link>
+                    <div className="navbar-end ">
 
                         <div className="avatar">
                             <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -78,7 +86,7 @@ const Navbar = () => {
                     </div>
 
                     <button
-                        className="btn ml-4 rounded-full bg-error text-white border-white border-2 hover:text-error hover:border-error hover:bg-white text-lg "
+                        className="btn ml-4   rounded-full bg-error text-white border-white border-2 hover:text-error hover:border-error hover:bg-white text-lg "
                         onClick={handleSignOut}
                     >
                         Log Out

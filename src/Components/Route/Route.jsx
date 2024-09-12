@@ -14,6 +14,8 @@ import Reservation from "../../Pages/DashboardPages/User/Reservation";
 import UserBooking from "../../Pages/DashboardPages/User/UserBooking";
 import UserCart from "../../Pages/DashboardPages/User/UserCart";
 import PrivateRoute from "./PrivateRoute";
+import DashboardContact from "../../Pages/DashboardPages/DashboardContact";
+import DashboardMenu from "../../Pages/DashboardPages/DashboardMenu";
 
 const router = createBrowserRouter([
     {
@@ -83,6 +85,14 @@ const router = createBrowserRouter([
                 element: <UserCart />
             },
             /////// Public Route /////////
+            {
+                path: 'Contact',
+                element: <DashboardContact />
+            },
+            {
+                path: 'Menu',
+                element: <DashboardMenu />
+            },
         ]
 
 
