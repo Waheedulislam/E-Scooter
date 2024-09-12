@@ -6,7 +6,10 @@ import auth from "../Firebase/Firebase.config";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import GoogleLogin from "../Auth/GoogleLogin";
 import GithubLogin from "../Auth/GithubLogin";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 const Register = () => {
+    // axios public
+    const axiosPublic = useAxiosPublic();
     // password show
     const [showPassword, setShowPassword] = useState(false);
 
@@ -31,9 +34,25 @@ const Register = () => {
     // location path condition
     const formLocation = location?.state?.from?.pathname || '/';
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit = async (data) => {
+
+        // firebase addition can not provide the name field. So I took the name field from to from
+        const name = data?.name;
         createUserWithEmailAndPassword(data.email, data.password, data.name)
+
+            .then((data) => {
+                if (data?.user?.email) {
+                    const userInfo = {
+                        name: name,
+                        email: data?.user?.email,
+                    }
+                    console.log(userInfo)
+                    axiosPublic.post('/users', userInfo)
+                }
+
+            })
+
+
     }
 
 
