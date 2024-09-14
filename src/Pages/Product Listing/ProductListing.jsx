@@ -97,7 +97,8 @@ const ProductListing = () => {
 
                         return matchesSearchTerm && matchesCategory && matchesPriceRange && matchesRating;
                     }).map((scooter) =>
-                        <AllScooter key={scooter._id} scooter={scooter} />
+                        <AllScooter key={scooter._id} scooter={scooter}
+                        />
                     )
                 }
             </div>
