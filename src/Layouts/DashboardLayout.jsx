@@ -7,11 +7,13 @@ import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
 import { useEffect } from "react";
 import auth from "../Components/Firebase/Firebase.config";
 import { toast } from "react-toastify";
+import useCart from "../Components/Hooks/useCart";
 
 const DashboardLayout = () => {
     const [user] = useAuthState(auth);
     const [signOut] = useSignOut(auth);
     const navigate = useNavigate();
+    const [cart] = useCart()
 
     const handleSignOut = () => {
         const successSignOut = signOut();
@@ -77,7 +79,7 @@ const DashboardLayout = () => {
                                     : '  bg-white border-teal-600 border-2  border-none hover:bg-white  hover:text-teal-700 px-3  rounded-lg text-lg font-medium'
                             } to={"/dashboard/user-cart"}
                         >
-                            <FaCartShopping /> My Cart
+                            <FaCartShopping /> My Cart ({cart.length})
                         </NavLink>
                     </li>
                     <li className="mt-2">
@@ -123,9 +125,9 @@ const DashboardLayout = () => {
                             isActive
                                 ? 'text-teal-700 bg-white  border-teal-600  text-lg    hover:bg-white border-2  px-3  rounded-lg  font-medium'
                                 : '  bg-white border-teal-600 border-2  border-none hover:bg-white  hover:text-teal-700 px-3  rounded-lg text-lg font-medium'
-                        } to={"/dashboard/menu"}
+                        } to={"/ProductListing"}
                     >
-                        <MdMenuOpen />Menu
+                        <MdMenuOpen />Scooter Items
                     </NavLink>
                     </li>
                     <li className="mt-2"><NavLink

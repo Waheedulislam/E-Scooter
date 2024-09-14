@@ -79,7 +79,7 @@ const AllScooter = ({ scooter }) => {
                 }
                 <h2 >
                     <span className="font-bold text-xl"> Price :</span>
-                    <span className="font-bold ml-2 text-teal-600">USD {price}/pcs</span>
+                    <span className="font-bold ml-2 text-teal-600">USD ${price}/pcs</span>
 
                 </h2>
                 <h2 >
