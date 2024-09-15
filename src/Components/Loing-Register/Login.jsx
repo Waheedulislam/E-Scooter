@@ -7,8 +7,10 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-
 import auth from "../Firebase/Firebase.config";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 const Login = () => {
+    const axiosPublic = useAxiosPublic();
     // show password 
     const [showPassword, setShowPassword] = useState(false);
     // use from
@@ -40,8 +42,19 @@ const Login = () => {
     const formLocation = location?.state?.from?.pathname || '/';
 
     const onSubmit = (data) => {
-        console.log(data)
         signInWithEmailAndPassword(data.email, data.password)
+            .then((res) => {
+                console.log(res)
+                if (res?.user?.email) {
+                    const userEmail = { email: res?.user?.email }
+                    axiosPublic.post('/jwt', userEmail)
+                        .then((res) => {
+                            if (res?.data?.token) {
+                                localStorage.setItem('access-token', res?.data?.token)
+                            }
+                        })
+                }
+            })
     }
 
     useEffect(() => {
@@ -50,12 +63,12 @@ const Login = () => {
         }
     }, [formLocation, user, navigate])
 
-
+    // Reset Password
     const handleResetPassword = async () => {
         const email = getValues("email");
         const success = await sendPasswordResetEmail(
             email
-        );
+        )
 
         if (success) {
             alert('Please Check your email.')

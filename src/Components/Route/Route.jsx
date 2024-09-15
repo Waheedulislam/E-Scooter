@@ -15,6 +15,7 @@ import UserBooking from "../../Pages/DashboardPages/User/UserBooking";
 import UserCart from "../../Pages/DashboardPages/User/UserCart";
 import PrivateRoute from "./PrivateRoute";
 import DashboardContact from "../../Pages/DashboardPages/DashboardContact";
+import AllUsers from "../../Pages/DashboardPages/Admin/AllUsers";
 
 const router = createBrowserRouter([
     {
@@ -57,7 +58,10 @@ const router = createBrowserRouter([
 
             },
             /////// Admin Route /////////
-
+            {
+                path: 'all-users',
+                element: <AllUsers />
+            },
             /////// User Route /////////
             {
                 path: 'user-home',

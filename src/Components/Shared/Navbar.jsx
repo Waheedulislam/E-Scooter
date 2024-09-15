@@ -14,7 +14,7 @@ const Navbar = () => {
     const handleSignOut = () => {
         const successSignOut = signOut();
         if (successSignOut) {
-            // localStorage.removeItem('access-token');
+            localStorage.removeItem('access-token');
             alert("Do you want to logout...?");
             toast.success("Successfully Logout");
         }
@@ -25,7 +25,7 @@ const Navbar = () => {
         <li><Link to={'/ProductListing'}>Product Listing</Link></li>
         <li><Link to={'/ProductDetails'}>Product Details</Link></li>
         <li>
-            <Link to={'/dashboard/user-cart'}>
+            <Link to={'/dashboard'}>
                 <button className='flex items-center'>
                     <FaCartShopping className='w-6 h-6' />
                     <div className="badge badge-secondary ml-2">+{scooters.length}</div>
