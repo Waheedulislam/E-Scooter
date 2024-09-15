@@ -23,7 +23,17 @@ const GoogleLogin = () => {
                     photoURL: data?.user?.photoURL
                 }
                 axiosPublic.post('/users', userInfo)
-                    .then(data => console.log(data.data))
+                    .then(data => {
+                        console.log(data.data)
+                        const userEmail = { email: userInfo.email }
+                        axiosPublic.post('/jwt', userEmail)
+                            .then((res) => {
+                                if (res?.data?.token) {
+                                    localStorage.setItem('access-token', res?.data?.token)
+                                }
+                            })
+                    }
+                    )
             }
             console.log(data)
         })
